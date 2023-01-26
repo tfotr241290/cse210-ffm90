@@ -4,10 +4,10 @@ public class Entry{
     List<string> _entryList = new List<string>();
 
     
-    public void SaveEntries(string _entry){
+    public void SaveEntries(string _entry,string prompt){
         var todayDate = DateTime.Today;
-        string strToday = todayDate.ToString();
-        _entryList.Add($"Date: {strToday} - Prompt: {_entry}");
+        string strToday = todayDate.ToString("MM/dd/yyyy");
+        _entryList.Add($"Date: {strToday} - Prompt: {prompt} My answer: {_entry}");
     }
 
     public void DisplayEntries(){
