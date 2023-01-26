@@ -5,6 +5,7 @@ public class Journal{
     
 
     public void DisplayMenu(){
+        Console.WriteLine("Please select one of the following choices: ");
         Console.WriteLine("1. Write");
         Console.WriteLine("2. Display");
         Console.WriteLine("3. Load");
