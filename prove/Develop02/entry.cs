@@ -17,5 +17,22 @@ public class Entry{
         }
     }
 
+    public void SaveToFile(string filename){
+        string path = $"C:/Users/Franco Chapa/Documents/cse210-ffm90/prove/Develop02/{filename}";
+        using (StreamWriter sw = File.CreateText(path)){
+            foreach(string l in _entryList){
+                sw.WriteLine(l);
+            }
+        }  
+        }
+
+    public void LoadFile(string filename){
+        string theFile = $"C:/Users/Franco Chapa/Documents/cse210-ffm90/prove/Develop02/{filename}";
+        string[] lines  = System.IO.File.ReadAllLines(filename);
+        foreach (string line in lines){
+            Console.WriteLine("\t" + line);
+        }
+    }
+
     
 }

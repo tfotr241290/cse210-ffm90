@@ -1,7 +1,7 @@
+
 public class Journal{
 
     public string _answer = "";
-
     
 
     public void DisplayMenu(){
@@ -15,6 +15,5 @@ public class Journal{
         Console.WriteLine("What would you like to do? ");
 
     }
-
 
 }

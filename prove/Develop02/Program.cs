@@ -1,4 +1,6 @@
 using System;
+using System.IO;
+using System.Text;
 
 class Program
 {
@@ -16,6 +18,7 @@ class Program
        
         myPrompts._prompt = "";
         myEntry._entry = "";
+        
         while(myChoice._answer != "5"){
             
             myChoice.DisplayMenu();
@@ -26,11 +29,23 @@ class Program
                  myEntry._entry = Console.ReadLine();
                  myEntry.SaveEntries(myEntry._entry,myPrompts._prompt);     
             }
+
             if(myChoice._answer == "2"){
                 myEntry.DisplayEntries();
             }
+
+            if(myChoice._answer == "3"){
+                Console.Write("Please type the name of the file: ");
+                string fileOpen = Console.ReadLine();
+                myEntry.LoadFile(fileOpen);
+            }
+
+            if(myChoice._answer == "4"){
+                Console.Write("Please type the name of the file, like this 'myfile.txt'");
+                string fileName = Console.ReadLine();
+                myEntry.SaveToFile(fileName);
+            }
         }
 
-        
     }
 }
